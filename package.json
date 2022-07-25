@@ -1,16 +1,5 @@
 {
-  "scripts": {
-    "start": "node server.js",
-    "build": "webpack --mode=production"
-  },
-  "dependencies": {
-    "express": "^4.18.1",
-    "node": "^18.5.0"
-  },
   "devDependencies": {
-    "prettier": "2.7.1",
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.8"
+    "prettier": "2.7.1"
   }
 }
