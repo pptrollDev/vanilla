@@ -5,6 +5,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { resolve } = require('path');
 
 module.exports = {
+  devServer: {
+    historyApiFallback: true,
+    port: 3000,
+  },
   entry: {
     app: './app.js'
   },
@@ -12,7 +16,6 @@ module.exports = {
     path: resolve(__dirname, './dist'),
     filename: '[name].js'
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -39,7 +42,6 @@ module.exports = {
       cleanAfterEveryBuildPatterns: ['dist']
     })
   ],
-
   module: {
     rules: [
       {

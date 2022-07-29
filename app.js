@@ -1,4 +1,5 @@
 require('./css/styles.css');
+require('./css/about.css');
 
 const route = (event) => {
   event = event || window.event;
