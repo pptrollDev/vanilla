@@ -10,7 +10,7 @@ module.exports = {
     port: 3000,
   },
   entry: {
-    app: './app.js'
+    app: './src/app.js'
   },
   output: {
     path: resolve(__dirname, './dist'),
