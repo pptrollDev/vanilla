@@ -1,12 +1,8 @@
 import Error from "../pages/error";
 
 export default class Router {
-    routes;
-
-    constructor (routes) {
-        this.routes = routes;
+    constructor () {
         window.onpopstate = this.handleLocation;
-        window.route = this.route;
         this.handleLocation();
     }
 
