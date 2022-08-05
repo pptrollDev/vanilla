@@ -1,3 +1,5 @@
+import Error from "../pages/error";
+
 export default class Router {
     routes;
 
@@ -17,8 +19,13 @@ export default class Router {
 
     handleLocation = async () => {
         const path = window.location.pathname;
-        const route = this.routes[path] || this.routes[404];
-        const html = await fetch(route).then((data) => data.text());
-        document.getElementById('main-page').innerHTML = html;
+
+        try {
+            const module = await import("../pages"+path);
+            
+            new module.default;  
+        } catch (error) {
+            new Error();
+        }
     };
 }
